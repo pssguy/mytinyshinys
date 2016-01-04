@@ -36,7 +36,7 @@ dashboardPage(
       width = 3, collapsible = TRUE,collapsed = FALSE,
       status = "success", solidHeader = TRUE,
       title = "Premier League",
-      footer = "Comprehensive, unique data from 1992/3 onwards  N.B. alpha version",
+      footer = "Comprehensive, unique data from 1992/3 onwards ",
       tags$body(
         a(
           href = "https://mytinyshinys.shinyapps.io/premierLeague/", target = "_blank",img(src =
@@ -107,12 +107,12 @@ dashboardPage(
     box(
       width = 3, collapsible = TRUE,collapsed = FALSE,
       status = "danger", solidHeader = TRUE,
-      title = "Wiki Guardian",
-      footer = "Search rates on Wikipedia and associated Guardian articles",
+      title = "News Views",
+      footer = "Wikipedia search rates/Guardian articles. DT headline makers",
       tags$body(
         a(
-          href = "https://mytinyshinys.shinyapps.io/wikiGuardian", target = "_blank",img(src =
-                                                                                           "images/wikiGuardian.png", width = 400, align = "center")
+          href = "https://mytinyshinys.shinyapps.io/newsViews", target = "_blank",img(src =
+                                                                                           "images/newsViews.png", width = 400, align = "center")
         )
       )
     ),
@@ -130,19 +130,20 @@ dashboardPage(
     ),
     box(
       width = 3, collapsible = TRUE,collapsed = FALSE,
-      status = "info", solidHeader = TRUE,
-      title = "Soccer_trelliscope",
-      footer = "Players Age order in team over time. More to come",
+      status = "danger", solidHeader = TRUE,
+      title = "American Community Survey",
+      footer = "Census and Survey Charts and Maps",
       tags$body(
         a(
-          href = "https://mytinyshinys.shinyapps.io/trelliscope_soccer", target =
-            "_blank",img(src = "images/trelliscope_soccer.png", width = 400, align =
-                           "center")
+          href = "https://mytinyshinys.shinyapps.io/usacs", target = "_blank",img(src =
+                                                                                        "images/acs.png", width = 400, align = "center")
         )
       )
     ),
-    box(
-      width = 3, collapsible = TRUE,collapsed = FALSE,
+
+    column(3,
+    box( width=12,
+       collapsible = TRUE,collapsed = TRUE,
       status = "info", solidHeader = TRUE,
       title = "Baseball_trelliscope",
       footer = "Pitchers WHIP by team by year. More to come",
@@ -155,10 +156,24 @@ dashboardPage(
       )
     ),
     box(
+      width = 12, collapsible = TRUE,collapsed = TRUE,
+      status = "info", solidHeader = TRUE,
+      title = "Soccer_trelliscope",
+      footer = "Players Age order in team over time. More to come",
+      tags$body(
+        a(
+          href = "https://mytinyshinys.shinyapps.io/trelliscope_soccer", target =
+            "_blank",img(src = "images/trelliscope_soccer.png", width = 400, align =
+                           "center")
+        )
+      )
+    )
+    ),
+    box(
       class = "information",
       width = 3, collapsible = TRUE,collapsed = FALSE,
       status = "warning", solidHeader = TRUE,
-      title = "Latest Updates",
+      title = "Latest Major Updates and New Chart Styles",
       includeMarkdown("updates.md")
     )
     
